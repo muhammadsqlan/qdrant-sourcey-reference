@@ -1,0 +1,10 @@
+{
+  "name": "sourcey",
+  "version": "3.6.12",
+  "license": "AGPL-3.0-only",
+  "git_head": null,
+  "source_repository": {
+    "url": "git+https://github.com/sourcey/sourcey.git",
+    "type": "git"
+  }
+}

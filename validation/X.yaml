@@ -1,0 +1,52 @@
+skill: qdrant-sourcey-validation
+version: "0.1.0"
+catalog:
+  kind: skill
+  audience: public
+  visibility: public
+  role: canonical
+harness:
+  cases:
+    - name: pinned-qdrant-output
+      runner: default
+      operator_journeys:
+        - mode: standalone
+          confusors: [sourcey, web-fetch]
+          request: Validate the existing pinned Qdrant Sourcey output without rebuilding or publishing it.
+          expected_outcome: Return source hashes, coverage, link, attribution, and asset checks in a sealed receipt.
+        - mode: composed
+          request: Validate the Sourcey build already produced by the prior build step.
+          expected_outcome: Read the supplied build directory and attest to its local validation results.
+          prior_evidence:
+            - The prebuilt site and pinned upstream OpenAPI specification.
+          must_not_repeat:
+            - Do not rebuild documentation or fetch a new source revision.
+      inputs:
+        build_dir: site
+        base_url: /docs/qdrant
+      expect:
+        status: sealed
+        receipt:
+          schema: runx.receipt.v1
+          state: sealed
+          disposition: closed
+          reason_code: process_closed
+runners:
+  default:
+    default: true
+    type: cli-tool
+    command: node
+    args:
+      - validate.mjs
+    artifacts:
+      named_emits:
+        validation: validation
+    inputs:
+      build_dir:
+        type: string
+        required: true
+        description: Generated site directory, relative to the documentation project.
+      base_url:
+        type: string
+        required: false
+        description: Public path prefix, such as /docs/qdrant; empty for a local root build.

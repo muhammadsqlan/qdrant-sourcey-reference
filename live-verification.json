@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-11T03:23:33.853Z",
+  "public_url": "https://muhammadsqlan.com/docs/qdrant/",
+  "http": [
+    {
+      "name": "index.html",
+      "requested_url": "https://muhammadsqlan.com/docs/qdrant/index.html",
+      "final_url": "https://muhammadsqlan.com/docs/qdrant/",
+      "status": 200,
+      "bytes": 21311,
+      "sha256": "a0e61f44260de466578da1aa3bc9a35944e906ac5c924b0dc627abc50b5a954e",
+      "matches_generated_file": true
+    },
+    {
+      "name": "query.html",
+      "requested_url": "https://muhammadsqlan.com/docs/qdrant/query.html",
+      "final_url": "https://muhammadsqlan.com/docs/qdrant/query",
+      "status": 200,
+      "bytes": 28825,
+      "sha256": "55e60cc4dcf8f412659070c7b8082f651eacf56c869fcf3be4ba910c5fe3e198",
+      "matches_generated_file": true
+    },
+    {
+      "name": "source.html",
+      "requested_url": "https://muhammadsqlan.com/docs/qdrant/source.html",
+      "final_url": "https://muhammadsqlan.com/docs/qdrant/source",
+      "status": 200,
+      "bytes": 19847,
+      "sha256": "fd17ea2d41a3c0cf12b5b0a03d8a5712610c349bc7a515e34baa033e6b4fedeb",
+      "matches_generated_file": true
+    },
+    {
+      "name": "api.html",
+      "requested_url": "https://muhammadsqlan.com/docs/qdrant/api.html",
+      "final_url": "https://muhammadsqlan.com/docs/qdrant/api",
+      "status": 200,
+      "bytes": 9842212,
+      "sha256": "48269a8f1f7614ba806798ca885684805e3813c90dd2611b1723f7bf4af733ed",
+      "matches_generated_file": true
+    },
+    {
+      "name": "search-index.json",
+      "requested_url": "https://muhammadsqlan.com/docs/qdrant/search-index.json",
+      "final_url": "https://muhammadsqlan.com/docs/qdrant/search-index.json",
+      "status": 200,
+      "bytes": 86889,
+      "sha256": "a23ea1a30302cd1425ac0eb085362539c6f730b643c9bb97fc38eb855d33eaba",
+      "matches_generated_file": true
+    },
+    {
+      "name": "sourcey.css",
+      "requested_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.css",
+      "final_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.css",
+      "status": 200,
+      "bytes": 123261,
+      "sha256": "f9f770f849e2ab5b0b8438e78cb3f47c822f8c0ca366606dcc0395884a4637a6",
+      "matches_generated_file": true
+    },
+    {
+      "name": "sourcey.js",
+      "requested_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.js",
+      "final_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.js",
+      "status": 200,
+      "bytes": 17809,
+      "sha256": "70a6cacc6871c28ae8b0418dfacff6b7c991443865a3c682fccaf86abd43df59",
+      "matches_generated_file": true
+    }
+  ],
+  "browser": {
+    "title": "Qdrant API - Qdrant API reference",
+    "landing": "On this page\nRead a collection\nStart\nQdrant API\nCollections, points, queries, and operations at a pinned Qdrant source revision.\n\n69 HTTP operations from Qdrant's OpenAPI specification.\n\nQuery points\nAPI reference\nSource and coverage\nOfficial documentation\n\nIndependent reference maintained by Muhammad Saqlain. This site is not an official Qdrant publication.\n\nRead a collection\n\nFor a local Qdrant instance with an existing notes collection:\n\ncurl 'http://localhost:6333/collections/notes'\n\nUse the API tab for request parameters, response schemas, and language examples. The source snapshot describes the development branch; check your deployed version before using an endpoint.\n\nNext →\nQuery points\nDocs by Sourcey",
+    "desktop": {
+      "viewport": 1365,
+      "content": 1365
+    },
+    "search_results": "ENDPOINTS\nPOST\n/collections/{collection_name}/points/query\nQuery points\nAPI\nPAGES\nQuery points\nGuide\nENDPOINTS\nPOST\n/collections/{collection_name}/points/query/batch\nQuery points in batch\nAPI\nPOST\n/collections/{collection_name}/points/query/groups\nQuery points, grouped by a given payload field\nAPI\nSECTIONS\nNearest vectors\nGuide\nFilter results\nGuide\nScroll points\nGuide\nSource\nGuide",
+    "search_navigation_url": "https://muhammadsqlan.com/docs/qdrant/api#operation-collections-collection-name-points-query-post",
+    "operation_count": 69,
+    "query_operation_present": true,
+    "mobile": {
+      "viewport": 390,
+      "content": 390
+    }
+  },
+  "errors": [],
+  "homepage": {
+    "status": 200,
+    "unchanged": true,
+    "before_sha256": "56ee31dce0559ac26300d587dff63a5567ab6c37915638098ca18ec5e450d259",
+    "after_sha256": "56ee31dce0559ac26300d587dff63a5567ab6c37915638098ca18ec5e450d259"
+  },
+  "passed": true
+}

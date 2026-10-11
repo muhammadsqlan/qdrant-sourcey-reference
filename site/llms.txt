@@ -1,0 +1,82 @@
+# Qdrant API reference
+
+> Collections, points, queries, and operations at a pinned Qdrant source revision.
+
+## Guide
+
+- [Qdrant API](/docs/qdrant/): Collections, points, queries, and operations at a pinned Qdrant source revision.
+- [Query points](/docs/qdrant/query.html): Query an existing collection and paginate filtered points.
+- [Source and coverage](/docs/qdrant/source.html): Source revision, license, coverage, and reproduction.
+
+## API
+
+- [Qdrant API](/docs/qdrant/api.html): API description for Qdrant vector search engine.
+- [List shard keys](/docs/qdrant/api.html#operation-collections-collection-name-shards-get): GET /collections/{collection_name}/shards
+- [Create shard key](/docs/qdrant/api.html#operation-collections-collection-name-shards-put): PUT /collections/{collection_name}/shards
+- [Delete shard key](/docs/qdrant/api.html#operation-collections-collection-name-shards-delete-post): POST /collections/{collection_name}/shards/delete
+- [Returns information about the running Qdrant instance](/docs/qdrant/api.html#operation--get): GET / - Returns information about the running Qdrant instance like version and commit id
+- [Collect telemetry data](/docs/qdrant/api.html#operation-telemetry-get): GET /telemetry - Collect telemetry data including app info, system info, collections info, cluster info, configs and statistics
+- [Collect Prometheus metrics data](/docs/qdrant/api.html#operation-metrics-get): GET /metrics - Collect metrics data including app info, collections info, cluster info and statistics
+- [Kubernetes healthz endpoint](/docs/qdrant/api.html#operation-healthz-get): GET /healthz - Liveness-style health check. Returns 200 as soon as the HTTP API is serving requests. It does not inspect collections, shards or consensus state, and is identical to `/livez`. Use it only to detect whether the process is up and responsive.
+- [Kubernetes livez endpoint](/docs/qdrant/api.html#operation-livez-get): GET /livez - Kubernetes liveness probe. Returns 200 as soon as the HTTP API is serving requests. It does not inspect collections, shards or consensus state, and is identical to `/healthz`. A failure indicates the process is unresponsive and should be restarted.
+- [Kubernetes readyz endpoint](/docs/qdrant/api.html#operation-readyz-get): GET /readyz - Kubernetes readiness probe. Checks the instance and waits out pending data operations to see when it can start accepting traffic. In a distributed deployment it returns 200 only once the node has caught up with the cluster consensus commit and its local shards are healthy; otherwise it returns 503. In a single-node deployment it always returns 200 once the API is up. Use it to decide when to route traffic to the instance.
+- [Get issues](/docs/qdrant/api.html#operation-issues-get): GET /issues - Get a report of performance issues and configuration suggestions
+- [Clear issues](/docs/qdrant/api.html#operation-issues-delete): DELETE /issues - Removes all issues reported so far
+- [Get cluster status info](/docs/qdrant/api.html#operation-cluster-get): GET /cluster - Get information about the current state and composition of the cluster
+- [Collect cluster telemetry data](/docs/qdrant/api.html#operation-cluster-telemetry-get): GET /cluster/telemetry - Get telemetry data, from the point of view of the cluster. This includes peers info, collections info, shard transfers, and resharding status
+- [Tries to recover current peer Raft state.](/docs/qdrant/api.html#operation-cluster-recover-post): POST /cluster/recover
+- [Remove peer from the cluster](/docs/qdrant/api.html#operation-cluster-peer-peer-id-delete): DELETE /cluster/peer/{peer_id} - Tries to remove peer from the cluster. Will return an error if peer has shards on it.
+- [Get global quotas](/docs/qdrant/api.html#operation-quotas-get): GET /quotas - Get the cluster-wide resource quota configuration, together with the current utilization it is measured against.
+- [Set global quotas](/docs/qdrant/api.html#operation-quotas-put): PUT /quotas - Replace the cluster-wide resource quota configuration. The new configuration is propagated to every peer through consensus and persisted, so it survives restarts
+- [List collections](/docs/qdrant/api.html#operation-collections-get): GET /collections - Get list name of all existing collections
+- [Collection info](/docs/qdrant/api.html#operation-collections-collection-name-get): GET /collections/{collection_name} - Get detailed information about specified existing collection
+- [Create collection](/docs/qdrant/api.html#operation-collections-collection-name-put): PUT /collections/{collection_name} - Create new collection with given parameters
+- [Delete collection](/docs/qdrant/api.html#operation-collections-collection-name-delete): DELETE /collections/{collection_name} - Drop collection and all associated data
+- [Update collection parameters](/docs/qdrant/api.html#operation-collections-collection-name-patch): PATCH /collections/{collection_name} - Update parameters of the existing collection
+- [Update aliases of the collections](/docs/qdrant/api.html#operation-collections-aliases-post): POST /collections/aliases
+- [Create index for field in collection](/docs/qdrant/api.html#operation-collections-collection-name-index-put): PUT /collections/{collection_name}/index - Create index for field in collection
+- [Check the existence of a collection](/docs/qdrant/api.html#operation-collections-collection-name-exists-get): GET /collections/{collection_name}/exists - Returns "true" if the given collection name exists, and "false" otherwise
+- [Delete index for field in collection](/docs/qdrant/api.html#operation-collections-collection-name-index-field-name-delete): DELETE /collections/{collection_name}/index/{field_name} - Delete field index for collection
+- [Create named vector](/docs/qdrant/api.html#operation-collections-collection-name-vectors-vector-name-put): PUT /collections/{collection_name}/vectors/{vector_name} - Create a new named vector on an existing collection
+- [Delete named vector](/docs/qdrant/api.html#operation-collections-collection-name-vectors-vector-name-delete): DELETE /collections/{collection_name}/vectors/{vector_name} - Delete a named vector from a collection
+- [Collection cluster info](/docs/qdrant/api.html#operation-collections-collection-name-cluster-get): GET /collections/{collection_name}/cluster - Get cluster information for a collection
+- [Update collection cluster setup](/docs/qdrant/api.html#operation-collections-collection-name-cluster-post): POST /collections/{collection_name}/cluster
+- [Get optimization progress](/docs/qdrant/api.html#operation-collections-collection-name-optimizations-get): GET /collections/{collection_name}/optimizations - Get progress of ongoing and completed optimizations for a collection
+- [List aliases for collection](/docs/qdrant/api.html#operation-collections-collection-name-aliases-get): GET /collections/{collection_name}/aliases - Get list of all aliases for a collection
+- [List collections aliases](/docs/qdrant/api.html#operation-aliases-get): GET /aliases - Get list of all existing collections aliases
+- [Recover from an uploaded snapshot](/docs/qdrant/api.html#operation-collections-collection-name-snapshots-upload-post): POST /collections/{collection_name}/snapshots/upload - Recover local collection data from an uploaded snapshot. This will overwrite any data, stored on this node, for the collection. If collection does not exist - it will be created.
+- [Recover from a snapshot](/docs/qdrant/api.html#operation-collections-collection-name-snapshots-recover-put): PUT /collections/{collection_name}/snapshots/recover - Recover local collection data from a snapshot. This will overwrite any data, stored on this node, for the collection. If collection does not exist - it will be created.
+- [List collection snapshots](/docs/qdrant/api.html#operation-collections-collection-name-snapshots-get): GET /collections/{collection_name}/snapshots - Get list of snapshots for a collection
+- [Create collection snapshot](/docs/qdrant/api.html#operation-collections-collection-name-snapshots-post): POST /collections/{collection_name}/snapshots - Create new snapshot for a collection
+- [Download collection snapshot](/docs/qdrant/api.html#operation-collections-collection-name-snapshots-snapshot-name-get): GET /collections/{collection_name}/snapshots/{snapshot_name} - Download specified snapshot from a collection as a file
+- [Delete collection snapshot](/docs/qdrant/api.html#operation-collections-collection-name-snapshots-snapshot-name-delete): DELETE /collections/{collection_name}/snapshots/{snapshot_name} - Delete snapshot for a collection
+- [List of storage snapshots](/docs/qdrant/api.html#operation-snapshots-get): GET /snapshots - Get list of snapshots of the whole storage
+- [Create storage snapshot](/docs/qdrant/api.html#operation-snapshots-post): POST /snapshots - Create new snapshot of the whole storage
+- [Download storage snapshot](/docs/qdrant/api.html#operation-snapshots-snapshot-name-get): GET /snapshots/{snapshot_name} - Download specified snapshot of the whole storage as a file
+- [Delete storage snapshot](/docs/qdrant/api.html#operation-snapshots-snapshot-name-delete): DELETE /snapshots/{snapshot_name} - Delete snapshot of the whole storage
+- [Download shard snapshot](/docs/qdrant/api.html#operation-collections-collection-name-shards-shard-id-snapshot-get): GET /collections/{collection_name}/shards/{shard_id}/snapshot - Stream the current state of a shard as a snapshot file
+- [Recover shard from an uploaded snapshot](/docs/qdrant/api.html#operation-collections-collection-name-shards-shard-id-snapshots-upload-post): POST /collections/{collection_name}/shards/{shard_id}/snapshots/upload - Recover shard of a local collection from an uploaded snapshot. This will overwrite any data, stored on this node, for the collection shard.
+- [Recover from a snapshot](/docs/qdrant/api.html#operation-collections-collection-name-shards-shard-id-snapshots-recover-put): PUT /collections/{collection_name}/shards/{shard_id}/snapshots/recover - Recover shard of a local collection data from a snapshot. This will overwrite any data, stored in this shard, for the collection.
+- [List shards snapshots for a collection](/docs/qdrant/api.html#operation-collections-collection-name-shards-shard-id-snapshots-get): GET /collections/{collection_name}/shards/{shard_id}/snapshots - Get list of snapshots for a shard of a collection
+- [Create shard snapshot](/docs/qdrant/api.html#operation-collections-collection-name-shards-shard-id-snapshots-post): POST /collections/{collection_name}/shards/{shard_id}/snapshots - Create new snapshot of a shard for a collection
+- [Download collection snapshot](/docs/qdrant/api.html#operation-collections-collection-name-shards-shard-id-snapshots-snapshot-name-get): GET /collections/{collection_name}/shards/{shard_id}/snapshots/{snapshot_name} - Download specified snapshot of a shard from a collection as a file
+- [Delete shard snapshot](/docs/qdrant/api.html#operation-collections-collection-name-shards-shard-id-snapshots-snapshot-name-delete): DELETE /collections/{collection_name}/shards/{shard_id}/snapshots/{snapshot_name} - Delete snapshot of a shard for a collection
+- [Get point](/docs/qdrant/api.html#operation-collections-collection-name-points-id-get): GET /collections/{collection_name}/points/{id} - Retrieve full information of single point by id
+- [Get points](/docs/qdrant/api.html#operation-collections-collection-name-points-post): POST /collections/{collection_name}/points - Retrieve multiple points by specified IDs
+- [Upsert points](/docs/qdrant/api.html#operation-collections-collection-name-points-put): PUT /collections/{collection_name}/points - Perform insert + updates on points. If point with given ID already exists - it will be overwritten.
+- [Delete points](/docs/qdrant/api.html#operation-collections-collection-name-points-delete-post): POST /collections/{collection_name}/points/delete - Delete points
+- [Update vectors](/docs/qdrant/api.html#operation-collections-collection-name-points-vectors-put): PUT /collections/{collection_name}/points/vectors - Update specified named vectors on points, keep unspecified vectors intact.
+- [Delete vectors](/docs/qdrant/api.html#operation-collections-collection-name-points-vectors-delete-post): POST /collections/{collection_name}/points/vectors/delete - Delete named vectors from the given points.
+- [Set payload](/docs/qdrant/api.html#operation-collections-collection-name-points-payload-post): POST /collections/{collection_name}/points/payload - Set payload values for points
+- [Overwrite payload](/docs/qdrant/api.html#operation-collections-collection-name-points-payload-put): PUT /collections/{collection_name}/points/payload - Replace full payload of points with new one
+- [Delete payload](/docs/qdrant/api.html#operation-collections-collection-name-points-payload-delete-post): POST /collections/{collection_name}/points/payload/delete - Delete specified key payload for points
+- [Clear payload](/docs/qdrant/api.html#operation-collections-collection-name-points-payload-clear-post): POST /collections/{collection_name}/points/payload/clear - Remove all payload for specified points
+- [Batch update points](/docs/qdrant/api.html#operation-collections-collection-name-points-batch-post): POST /collections/{collection_name}/points/batch - Apply a series of update operations for points, vectors and payloads
+- [Scroll points](/docs/qdrant/api.html#operation-collections-collection-name-points-scroll-post): POST /collections/{collection_name}/points/scroll - Scroll request - paginate over all points which matches given filtering condition
+- [Count points](/docs/qdrant/api.html#operation-collections-collection-name-points-count-post): POST /collections/{collection_name}/points/count - Count points which matches given filtering condition
+- [Facet a payload key with a given filter.](/docs/qdrant/api.html#operation-collections-collection-name-facet-post): POST /collections/{collection_name}/facet - Count points that satisfy the given filter for each unique value of a payload key.
+- [Query points](/docs/qdrant/api.html#operation-collections-collection-name-points-query-post): POST /collections/{collection_name}/points/query - Universally query points. This endpoint covers all capabilities of search, recommend, discover, filters. But also enables hybrid and multi-stage queries.
+- [Query points in batch](/docs/qdrant/api.html#operation-collections-collection-name-points-query-batch-post): POST /collections/{collection_name}/points/query/batch - Universally query points in batch. This endpoint covers all capabilities of search, recommend, discover, filters. But also enables hybrid and multi-stage queries.
+- [Query points, grouped by a given payload field](/docs/qdrant/api.html#operation-collections-collection-name-points-query-groups-post): POST /collections/{collection_name}/points/query/groups - Universally query points, grouped by a given payload field
+- [Search points matrix distance pairs](/docs/qdrant/api.html#operation-collections-collection-name-points-search-matrix-pairs-post): POST /collections/{collection_name}/points/search/matrix/pairs - Compute distance matrix for sampled points with a pair based output format
+- [Search points matrix distance offsets](/docs/qdrant/api.html#operation-collections-collection-name-points-search-matrix-offsets-post): POST /collections/{collection_name}/points/search/matrix/offsets - Compute distance matrix for sampled points with an offset based output format

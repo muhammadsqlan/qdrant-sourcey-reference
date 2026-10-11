@@ -1,0 +1,14 @@
+{
+  "name": "qdrant-sourcey-reference",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node validation/validate.mjs"
+  },
+  "devDependencies": {
+    "sourcey": "3.6.12",
+    "@runxhq/cli": "0.9.1",
+    "htmlparser2": "12.0.0"
+  }
+}

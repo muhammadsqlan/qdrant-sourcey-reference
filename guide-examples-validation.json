@@ -1,0 +1,58 @@
+{
+  "scope": "request-schema validation only; no server requests",
+  "examples": [
+    {
+      "name": "nearest_vectors",
+      "schema": "QueryRequest",
+      "body": {
+        "query": [
+          0.2,
+          0.1,
+          0.9,
+          0.7
+        ],
+        "limit": 3,
+        "with_payload": true
+      },
+      "valid": true,
+      "errors": []
+    },
+    {
+      "name": "filtered_query",
+      "schema": "QueryRequest",
+      "body": {
+        "query": [
+          0.2,
+          0.1,
+          0.9,
+          0.7
+        ],
+        "filter": {
+          "must": [
+            {
+              "key": "city",
+              "match": {
+                "value": "London"
+              }
+            }
+          ]
+        },
+        "limit": 3,
+        "with_payload": true
+      },
+      "valid": true,
+      "errors": []
+    },
+    {
+      "name": "scroll",
+      "schema": "ScrollRequest",
+      "body": {
+        "limit": 10,
+        "with_payload": true,
+        "with_vector": false
+      },
+      "valid": true,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+/* Keep long API paths and schema identifiers within their documentation column. */
+#sourcey main, #sourcey main section, #sourcey main article { min-width: 0; }
+#sourcey main pre { max-width: 100%; overflow-x: auto; }
+#sourcey main table { max-width: 100%; }
+#sourcey main td, #sourcey main th { overflow-wrap: anywhere; }
+#sourcey main :not(pre) > code { overflow-wrap: anywhere; }
+#sourcey main .param-type { min-width: 0; max-width: 100%; flex-wrap: wrap; }
+#sourcey main .json-property-type { white-space: normal; overflow-wrap: anywhere; }
+#sourcey [id^="definition-"] header > div { flex-wrap: wrap; }
+#sourcey [id^="definition-"] h2 { overflow-wrap: anywhere; }

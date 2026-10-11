@@ -1,0 +1,941 @@
+{
+  "summary": "Sourcey 3.6.12 documentation generated from Qdrant’s unchanged Apache-2.0 OpenAPI snapshot at 016542aa5deb6c66380bb137badf73d54f742bde. All 69 operations are rendered and searchable, with query examples, provenance, real maintainer findings, live checks, and a locally signed runx validation receipt.",
+  "created_at": "2026-10-11T03:24:50.776620+00:00",
+  "public_url": "https://muhammadsqlan.com/docs/qdrant/",
+  "source_repository": "https://github.com/muhammadsqlan/qdrant-sourcey-reference",
+  "runx_version": "runx-cli 0.9.1",
+  "receipt_ref": "runx:receipt:sha256:e5760c8965833bb171389a1f6ec8d8c4c75bd79a53dfe6df7ca2c894d54defca",
+  "observations": [
+    {
+      "id": "upstream",
+      "repo_url": "https://github.com/qdrant/qdrant",
+      "commit": "016542aa5deb6c66380bb137badf73d54f742bde",
+      "commit_date": "2026-10-05T10:03:16Z",
+      "source_url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/docs/redoc/master/openapi.json",
+      "recent_activity": "2026-10-10T23:30:41Z",
+      "stars_at_inspection": 35015,
+      "summary": "Maintained third-party Qdrant upstream, not a contributor-owned fork; the repository contains multiple source crates and modules."
+    },
+    {
+      "id": "license",
+      "license": "Apache-2.0",
+      "file": "upstream/LICENSE",
+      "url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/LICENSE"
+    },
+    {
+      "id": "input",
+      "adapter": "Sourcey OpenAPI navigation adapter",
+      "file": "upstream/openapi.json",
+      "sha256": "22a890a799743906f5337588bb8e5ee3fccc518825e7bb5012add1ce579aa174",
+      "summary": "The upstream specification is unchanged. No synthetic endpoint list or filtered substitute was used."
+    },
+    {
+      "id": "generation",
+      "sourcey_version": "3.6.12",
+      "config": "docs/sourcey.config.ts",
+      "command": "SOURCEY_SITE_URL=https://muhammadsqlan.com SOURCEY_BASE_URL=/docs/qdrant sourcey build --config docs/sourcey.config.ts -o site",
+      "summary": "Sourcey renders the actual specification, adds curl/JavaScript/Python samples, and builds endpoint search."
+    },
+    {
+      "id": "runx_cli_version",
+      "command": "runx --version",
+      "output": "runx-cli 0.9.1"
+    },
+    {
+      "id": "pages",
+      "pages": [
+        {
+          "name": "api.html",
+          "bytes": 9842212,
+          "sha256": "48269a8f1f7614ba806798ca885684805e3813c90dd2611b1723f7bf4af733ed",
+          "url": "https://muhammadsqlan.com/docs/qdrant/api.html"
+        },
+        {
+          "name": "index.html",
+          "bytes": 21311,
+          "sha256": "a0e61f44260de466578da1aa3bc9a35944e906ac5c924b0dc627abc50b5a954e",
+          "url": "https://muhammadsqlan.com/docs/qdrant/index.html"
+        },
+        {
+          "name": "query.html",
+          "bytes": 28825,
+          "sha256": "55e60cc4dcf8f412659070c7b8082f651eacf56c869fcf3be4ba910c5fe3e198",
+          "url": "https://muhammadsqlan.com/docs/qdrant/query.html"
+        },
+        {
+          "name": "source.html",
+          "bytes": 19847,
+          "sha256": "fd17ea2d41a3c0cf12b5b0a03d8a5712610c349bc7a515e34baa033e6b4fedeb",
+          "url": "https://muhammadsqlan.com/docs/qdrant/source.html"
+        }
+      ],
+      "summary": "A compact landing page, query guide, provenance page, and full API reference."
+    },
+    {
+      "id": "coverage",
+      "operation_count": 69,
+      "documented_operation_count": 69,
+      "searchable_operation_count": 69,
+      "operations": [
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/shards",
+          "operation_id": "create_shard_key",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/shards",
+          "operation_id": "list_shard_keys",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/shards/delete",
+          "operation_id": "delete_shard_key",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/",
+          "operation_id": "root",
+          "tags": [
+            "Service"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/telemetry",
+          "operation_id": "telemetry",
+          "tags": [
+            "Service"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/metrics",
+          "operation_id": "metrics",
+          "tags": [
+            "Service"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/healthz",
+          "operation_id": "healthz",
+          "tags": [
+            "Service"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/livez",
+          "operation_id": "livez",
+          "tags": [
+            "Service"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/readyz",
+          "operation_id": "readyz",
+          "tags": [
+            "Service"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/issues",
+          "operation_id": "get_issues",
+          "tags": [
+            "Beta"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/issues",
+          "operation_id": "clear_issues",
+          "tags": [
+            "Beta"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/cluster",
+          "operation_id": "cluster_status",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/cluster/telemetry",
+          "operation_id": "cluster_telemetry",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/cluster/recover",
+          "operation_id": "recover_current_peer",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/cluster/peer/{peer_id}",
+          "operation_id": "remove_peer",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/quotas",
+          "operation_id": "get_quotas",
+          "tags": [
+            "Quotas"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/quotas",
+          "operation_id": "update_quotas",
+          "tags": [
+            "Quotas"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections",
+          "operation_id": "get_collections",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}",
+          "operation_id": "get_collection",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}",
+          "operation_id": "create_collection",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "PATCH",
+          "path": "/collections/{collection_name}",
+          "operation_id": "update_collection",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/collections/{collection_name}",
+          "operation_id": "delete_collection",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/aliases",
+          "operation_id": "update_aliases",
+          "tags": [
+            "Aliases"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/index",
+          "operation_id": "create_field_index",
+          "tags": [
+            "Indexes"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/exists",
+          "operation_id": "collection_exists",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/collections/{collection_name}/index/{field_name}",
+          "operation_id": "delete_field_index",
+          "tags": [
+            "Indexes"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/vectors/{vector_name}",
+          "operation_id": "create_vector_name",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/collections/{collection_name}/vectors/{vector_name}",
+          "operation_id": "delete_vector_name",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/cluster",
+          "operation_id": "collection_cluster_info",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/cluster",
+          "operation_id": "update_collection_cluster",
+          "tags": [
+            "Distributed"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/optimizations",
+          "operation_id": "get_optimizations",
+          "tags": [
+            "Collections"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/aliases",
+          "operation_id": "get_collection_aliases",
+          "tags": [
+            "Aliases"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/aliases",
+          "operation_id": "get_collections_aliases",
+          "tags": [
+            "Aliases"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/snapshots/upload",
+          "operation_id": "recover_from_uploaded_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/snapshots/recover",
+          "operation_id": "recover_from_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/snapshots",
+          "operation_id": "list_snapshots",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/snapshots",
+          "operation_id": "create_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/collections/{collection_name}/snapshots/{snapshot_name}",
+          "operation_id": "delete_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/snapshots/{snapshot_name}",
+          "operation_id": "get_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/snapshots",
+          "operation_id": "list_full_snapshots",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/snapshots",
+          "operation_id": "create_full_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/snapshots/{snapshot_name}",
+          "operation_id": "delete_full_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/snapshots/{snapshot_name}",
+          "operation_id": "get_full_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/shards/{shard_id}/snapshot",
+          "operation_id": "stream_shard_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/shards/{shard_id}/snapshots/upload",
+          "operation_id": "recover_shard_from_uploaded_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/shards/{shard_id}/snapshots/recover",
+          "operation_id": "recover_shard_from_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/shards/{shard_id}/snapshots",
+          "operation_id": "list_shard_snapshots",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/shards/{shard_id}/snapshots",
+          "operation_id": "create_shard_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/collections/{collection_name}/shards/{shard_id}/snapshots/{snapshot_name}",
+          "operation_id": "delete_shard_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/shards/{shard_id}/snapshots/{snapshot_name}",
+          "operation_id": "get_shard_snapshot",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/collections/{collection_name}/points/{id}",
+          "operation_id": "get_point",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points",
+          "operation_id": "get_points",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/points",
+          "operation_id": "upsert_points",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/delete",
+          "operation_id": "delete_points",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/points/vectors",
+          "operation_id": "update_vectors",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/vectors/delete",
+          "operation_id": "delete_vectors",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/payload",
+          "operation_id": "set_payload",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/collections/{collection_name}/points/payload",
+          "operation_id": "overwrite_payload",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/payload/delete",
+          "operation_id": "delete_payload",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/payload/clear",
+          "operation_id": "clear_payload",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/batch",
+          "operation_id": "batch_update",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/scroll",
+          "operation_id": "scroll_points",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/count",
+          "operation_id": "count_points",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/facet",
+          "operation_id": "facet",
+          "tags": [
+            "Points"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/query",
+          "operation_id": "query_points",
+          "tags": [
+            "Search"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/query/batch",
+          "operation_id": "query_batch_points",
+          "tags": [
+            "Search"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/query/groups",
+          "operation_id": "query_points_groups",
+          "tags": [
+            "Search"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/search/matrix/pairs",
+          "operation_id": "search_matrix_pairs",
+          "tags": [
+            "Search"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/collections/{collection_name}/points/search/matrix/offsets",
+          "operation_id": "search_matrix_offsets",
+          "tags": [
+            "Search"
+          ]
+        }
+      ],
+      "tags": {
+        "Distributed": 9,
+        "Service": 6,
+        "Beta": 2,
+        "Quotas": 2,
+        "Collections": 9,
+        "Aliases": 3,
+        "Indexes": 2,
+        "Snapshots": 17,
+        "Points": 14,
+        "Search": 5
+      },
+      "summary": "Every path/method pair in the pinned input has a generated endpoint search entry and a resolvable anchor."
+    },
+    {
+      "id": "local_validation",
+      "result": {
+        "verified": true,
+        "summary": "Validation of Sourcey output against all 69 operations in the pinned Qdrant OpenAPI snapshot.",
+        "checks": [
+          {
+            "name": "source hash",
+            "passed": true,
+            "detail": "22a890a799743906f5337588bb8e5ee3fccc518825e7bb5012add1ce579aa174"
+          },
+          {
+            "name": "minimum API coverage",
+            "passed": true,
+            "detail": {
+              "upstream": 69,
+              "searchable": 69,
+              "missingOperations": []
+            }
+          },
+          {
+            "name": "links and search anchors",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "public landing size",
+            "passed": true,
+            "detail": 21311
+          },
+          {
+            "name": "source attribution",
+            "passed": true,
+            "detail": "Pinned upstream revision displayed"
+          },
+          {
+            "name": "license preserved",
+            "passed": true,
+            "detail": "Apache-2.0"
+          },
+          {
+            "name": "guide examples",
+            "passed": true,
+            "detail": "Query and scroll examples rendered"
+          },
+          {
+            "name": "theme assets",
+            "passed": true,
+            "detail": "Required assets nonempty"
+          }
+        ],
+        "pages": [
+          {
+            "name": "api.html",
+            "bytes": 9842212,
+            "sha256": "48269a8f1f7614ba806798ca885684805e3813c90dd2611b1723f7bf4af733ed"
+          },
+          {
+            "name": "index.html",
+            "bytes": 21311,
+            "sha256": "a0e61f44260de466578da1aa3bc9a35944e906ac5c924b0dc627abc50b5a954e"
+          },
+          {
+            "name": "query.html",
+            "bytes": 28825,
+            "sha256": "55e60cc4dcf8f412659070c7b8082f651eacf56c869fcf3be4ba910c5fe3e198"
+          },
+          {
+            "name": "source.html",
+            "bytes": 19847,
+            "sha256": "fd17ea2d41a3c0cf12b5b0a03d8a5712610c349bc7a515e34baa033e6b4fedeb"
+          }
+        ],
+        "operation_count": 69
+      },
+      "artifact": "validation-site.json"
+    },
+    {
+      "id": "guide_examples",
+      "result": {
+        "scope": "request-schema validation only; no server requests",
+        "examples": [
+          {
+            "name": "nearest_vectors",
+            "schema": "QueryRequest",
+            "body": {
+              "query": [
+                0.2,
+                0.1,
+                0.9,
+                0.7
+              ],
+              "limit": 3,
+              "with_payload": true
+            },
+            "valid": true,
+            "errors": []
+          },
+          {
+            "name": "filtered_query",
+            "schema": "QueryRequest",
+            "body": {
+              "query": [
+                0.2,
+                0.1,
+                0.9,
+                0.7
+              ],
+              "filter": {
+                "must": [
+                  {
+                    "key": "city",
+                    "match": {
+                      "value": "London"
+                    }
+                  }
+                ]
+              },
+              "limit": 3,
+              "with_payload": true
+            },
+            "valid": true,
+            "errors": []
+          },
+          {
+            "name": "scroll",
+            "schema": "ScrollRequest",
+            "body": {
+              "limit": 10,
+              "with_payload": true,
+              "with_vector": false
+            },
+            "valid": true,
+            "errors": []
+          }
+        ]
+      },
+      "summary": "The three actual guide bodies pass JSON Schema validation; no live Qdrant server was used."
+    },
+    {
+      "id": "receipt",
+      "receipt_ref": "runx:receipt:sha256:e5760c8965833bb171389a1f6ec8d8c4c75bd79a53dfe6df7ca2c894d54defca",
+      "receipt_file": "receipt-site.json",
+      "verification_file": "receipt-verification-site.json",
+      "verification": {
+        "schema": "runx.verify_verdict.v1",
+        "receipt_id": "sha256:e5760c8965833bb171389a1f6ec8d8c4c75bd79a53dfe6df7ca2c894d54defca",
+        "valid": true,
+        "digest": {
+          "status": "valid",
+          "expected": "sha256:3519c0919e78ebc9c1abbf4ef6aaa09bdc9ae130f259c4f5f6365b1a97986c6d",
+          "actual": "sha256:3519c0919e78ebc9c1abbf4ef6aaa09bdc9ae130f259c4f5f6365b1a97986c6d"
+        },
+        "content_address": {
+          "status": "valid",
+          "expected": "sha256:e5760c8965833bb171389a1f6ec8d8c4c75bd79a53dfe6df7ca2c894d54defca",
+          "actual": "sha256:e5760c8965833bb171389a1f6ec8d8c4c75bd79a53dfe6df7ca2c894d54defca"
+        },
+        "signature": {
+          "mode": "local-development",
+          "status": "valid",
+          "kid": "runtime-skeleton"
+        },
+        "lineage": {
+          "status": "unverified",
+          "message": "single receipt verification cannot prove receipt-tree lineage"
+        },
+        "findings": []
+      },
+      "summary": "Actual runx governed validation command closure. Local-development signature; not independent notarization. The original sealed bytes were preserved after the no-delete sandbox blocked the final storage rename."
+    },
+    {
+      "id": "public_host",
+      "public_url": "https://muhammadsqlan.com/docs/qdrant/",
+      "parent_url": "https://muhammadsqlan.com/",
+      "domain_registration": "2026-08-05T23:47:25Z",
+      "registration_source": "https://rdap.verisign.com/com/v1/domain/muhammadsqlan.com",
+      "summary": "Published with permission on the contributor’s existing registered personal domain. Registration predates this work; this is an independent reference with explicit attribution, not upstream adoption."
+    },
+    {
+      "id": "live_verification",
+      "result": {
+        "date": "2026-10-11T03:23:33.853Z",
+        "public_url": "https://muhammadsqlan.com/docs/qdrant/",
+        "http": [
+          {
+            "name": "index.html",
+            "requested_url": "https://muhammadsqlan.com/docs/qdrant/index.html",
+            "final_url": "https://muhammadsqlan.com/docs/qdrant/",
+            "status": 200,
+            "bytes": 21311,
+            "sha256": "a0e61f44260de466578da1aa3bc9a35944e906ac5c924b0dc627abc50b5a954e",
+            "matches_generated_file": true
+          },
+          {
+            "name": "query.html",
+            "requested_url": "https://muhammadsqlan.com/docs/qdrant/query.html",
+            "final_url": "https://muhammadsqlan.com/docs/qdrant/query",
+            "status": 200,
+            "bytes": 28825,
+            "sha256": "55e60cc4dcf8f412659070c7b8082f651eacf56c869fcf3be4ba910c5fe3e198",
+            "matches_generated_file": true
+          },
+          {
+            "name": "source.html",
+            "requested_url": "https://muhammadsqlan.com/docs/qdrant/source.html",
+            "final_url": "https://muhammadsqlan.com/docs/qdrant/source",
+            "status": 200,
+            "bytes": 19847,
+            "sha256": "fd17ea2d41a3c0cf12b5b0a03d8a5712610c349bc7a515e34baa033e6b4fedeb",
+            "matches_generated_file": true
+          },
+          {
+            "name": "api.html",
+            "requested_url": "https://muhammadsqlan.com/docs/qdrant/api.html",
+            "final_url": "https://muhammadsqlan.com/docs/qdrant/api",
+            "status": 200,
+            "bytes": 9842212,
+            "sha256": "48269a8f1f7614ba806798ca885684805e3813c90dd2611b1723f7bf4af733ed",
+            "matches_generated_file": true
+          },
+          {
+            "name": "search-index.json",
+            "requested_url": "https://muhammadsqlan.com/docs/qdrant/search-index.json",
+            "final_url": "https://muhammadsqlan.com/docs/qdrant/search-index.json",
+            "status": 200,
+            "bytes": 86889,
+            "sha256": "a23ea1a30302cd1425ac0eb085362539c6f730b643c9bb97fc38eb855d33eaba",
+            "matches_generated_file": true
+          },
+          {
+            "name": "sourcey.css",
+            "requested_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.css",
+            "final_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.css",
+            "status": 200,
+            "bytes": 123261,
+            "sha256": "f9f770f849e2ab5b0b8438e78cb3f47c822f8c0ca366606dcc0395884a4637a6",
+            "matches_generated_file": true
+          },
+          {
+            "name": "sourcey.js",
+            "requested_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.js",
+            "final_url": "https://muhammadsqlan.com/docs/qdrant/sourcey.js",
+            "status": 200,
+            "bytes": 17809,
+            "sha256": "70a6cacc6871c28ae8b0418dfacff6b7c991443865a3c682fccaf86abd43df59",
+            "matches_generated_file": true
+          }
+        ],
+        "browser": {
+          "title": "Qdrant API - Qdrant API reference",
+          "landing": "On this page\nRead a collection\nStart\nQdrant API\nCollections, points, queries, and operations at a pinned Qdrant source revision.\n\n69 HTTP operations from Qdrant's OpenAPI specification.\n\nQuery points\nAPI reference\nSource and coverage\nOfficial documentation\n\nIndependent reference maintained by Muhammad Saqlain. This site is not an official Qdrant publication.\n\nRead a collection\n\nFor a local Qdrant instance with an existing notes collection:\n\ncurl 'http://localhost:6333/collections/notes'\n\nUse the API tab for request parameters, response schemas, and language examples. The source snapshot describes the development branch; check your deployed version before using an endpoint.\n\nNext →\nQuery points\nDocs by Sourcey",
+          "desktop": {
+            "viewport": 1365,
+            "content": 1365
+          },
+          "search_results": "ENDPOINTS\nPOST\n/collections/{collection_name}/points/query\nQuery points\nAPI\nPAGES\nQuery points\nGuide\nENDPOINTS\nPOST\n/collections/{collection_name}/points/query/batch\nQuery points in batch\nAPI\nPOST\n/collections/{collection_name}/points/query/groups\nQuery points, grouped by a given payload field\nAPI\nSECTIONS\nNearest vectors\nGuide\nFilter results\nGuide\nScroll points\nGuide\nSource\nGuide",
+          "search_navigation_url": "https://muhammadsqlan.com/docs/qdrant/api#operation-collections-collection-name-points-query-post",
+          "operation_count": 69,
+          "query_operation_present": true,
+          "mobile": {
+            "viewport": 390,
+            "content": 390
+          }
+        },
+        "errors": [],
+        "homepage": {
+          "status": 200,
+          "unchanged": true,
+          "before_sha256": "56ee31dce0559ac26300d587dff63a5567ab6c37915638098ca18ec5e450d259",
+          "after_sha256": "56ee31dce0559ac26300d587dff63a5567ab6c37915638098ca18ec5e450d259"
+        },
+        "passed": true
+      },
+      "artifact": "live-verification.json"
+    },
+    {
+      "id": "search_readiness",
+      "summary": "The successful browser search check waits for the initial index fetch. A prior fast interaction typing during that fetch did not return the expected result; the renderer load callback redraws an empty query. See the maintainer report."
+    },
+    {
+      "id": "maintainer_gaps",
+      "report": "report.md",
+      "summary": "Report covers legacy top/limit examples, unresolved server variables, the large single API page, mobile union/schema wrapping, runtime testing gaps, and release drift."
+    }
+  ],
+  "limitations": [
+    "Independent reference, not endorsed by Qdrant.",
+    "No live Qdrant server or integration test.",
+    "Generated API HTML is 9,842,212 bytes; placeholders need substitution.",
+    "Typing during the first lazy search-index fetch can lose the displayed query result; retype once the index loads.",
+    "Receipt uses a local-development signature; single-receipt lineage is unverified.",
+    "Bounty acceptance and payment are unconfirmed."
+  ]
+}
