@@ -1,0 +1,19 @@
+{
+  "restored_at": "2026-10-21T21:04:39.001425+00:00",
+  "public_url": "https://muhammadsqlan.com/docs/qdrant/",
+  "worker": "muhammadsqlan-qdrant-docs",
+  "worker_version": "c12e4d52-b7ea-4352-bedd-1629a45f3bc8",
+  "routes": [
+    "muhammadsqlan.com/docs/qdrant/*",
+    "muhammadsqlan.com/docs/qdrant"
+  ],
+  "submitted_source_commit": "88d85a4b76d4bab9f0d497884ffd5178a3e069f5",
+  "submitted_website_commit": "67ab227020f8b6823e1eb7bbc547302e015e0eac",
+  "asset_count": 14,
+  "submitted_assets_unchanged": true,
+  "homepage_unchanged": true,
+  "main_website_deployment_unchanged": true,
+  "all_preexisting_routes_unchanged": true,
+  "validation": "All 14 hosted files match the original submission. Search, 69 operation anchors, 1365px desktop and 390px mobile checks passed without console or request errors.",
+  "note": "The original path returned HTTP 404 on 22 October Pakistan time after a later main-site deployment. A separate assets-only Worker now serves only the documentation path. The initial verification attempt compared different HTTP clients; Cloudflare injected its analytics beacon for only one client. Matching requests produce identical homepage bytes."
+}
