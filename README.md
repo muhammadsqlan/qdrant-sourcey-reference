@@ -5,6 +5,15 @@ The unchanged source snapshot is pinned to
 [`016542aa5deb6c66380bb137badf73d54f742bde`](https://github.com/qdrant/qdrant/tree/016542aa5deb6c66380bb137badf73d54f742bde).
 It contains 69 HTTP operations. Qdrant has not endorsed this publication.
 
+## Current publication
+
+Live reference: https://qdrant.muhammadsqlan.com/
+
+The dedicated subdomain serves the documentation at its root. Updated build,
+report, receipt, and live verification: [2026-10-22 publication](hosting/2026-10-22/qdrant-subdomain/README.md).
+Original root evidence and the older path build are retained as historical artifacts.
+The parent homepage remains unchanged. This reference is independent of Qdrant.
+
 ## Build
 
 Requires Node.js 24 and the exact tool versions in `package.json`.

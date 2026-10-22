@@ -1,0 +1,75 @@
+{
+  "validation": {
+    "checks": [
+      {
+        "detail": "22a890a799743906f5337588bb8e5ee3fccc518825e7bb5012add1ce579aa174",
+        "name": "source hash",
+        "passed": true
+      },
+      {
+        "detail": {
+          "missingOperations": [],
+          "searchable": 69,
+          "upstream": 69
+        },
+        "name": "minimum API coverage",
+        "passed": true
+      },
+      {
+        "detail": [],
+        "name": "links and search anchors",
+        "passed": true
+      },
+      {
+        "detail": 21291,
+        "name": "public landing size",
+        "passed": true
+      },
+      {
+        "detail": "Pinned upstream revision displayed",
+        "name": "source attribution",
+        "passed": true
+      },
+      {
+        "detail": "Apache-2.0",
+        "name": "license preserved",
+        "passed": true
+      },
+      {
+        "detail": "Query and scroll examples rendered",
+        "name": "guide examples",
+        "passed": true
+      },
+      {
+        "detail": "Required assets nonempty",
+        "name": "theme assets",
+        "passed": true
+      }
+    ],
+    "operation_count": 69,
+    "pages": [
+      {
+        "bytes": 9842192,
+        "name": "api.html",
+        "sha256": "0c6f6b71b0ef9c1846d7aa31703f1e042098aaf2bca6519ab36667d54a0095e4"
+      },
+      {
+        "bytes": 21291,
+        "name": "index.html",
+        "sha256": "d81f134a13b1ce53f80bfbdc63006ba76aa02540202a99e4c9475e429c837324"
+      },
+      {
+        "bytes": 28805,
+        "name": "query.html",
+        "sha256": "ddb54c59c3ded3f554a23556fc547da2828f4d74bd2e957233498d21c6a8536c"
+      },
+      {
+        "bytes": 19827,
+        "name": "source.html",
+        "sha256": "98490f79f44ecd1c3438d0b9f101a138a5d1722674d7445b8dda9d947c12181f"
+      }
+    ],
+    "summary": "Validation of Sourcey output against all 69 operations in the pinned Qdrant OpenAPI snapshot.",
+    "verified": true
+  }
+}
